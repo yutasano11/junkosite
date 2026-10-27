@@ -221,7 +221,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 /* ---------- 予約CTA帯 ---------- */
 .cta-band {
   text-align: center; color: var(--white); padding: 88px 0;
-  background: linear-gradient(rgba(60, 81, 48, .78), rgba(60, 81, 48, .78)), url("../images/salon.jpg") center / cover;
+  background: linear-gradient(rgba(70, 50, 28, .72), rgba(70, 50, 28, .72)), url("../images/salon.jpg") center / cover;
 }
 .cta-band h2 { font-size: clamp(1.6rem, 3.4vw, 2.2rem); margin-bottom: 28px; }
 .cta-band-lead { margin-bottom: 4px; }
@@ -328,4 +328,40 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   }
   .sticky-cta-reserve { background: var(--cta); color: var(--white); }
   .sticky-cta-menu { background: var(--white); color: var(--brown); }
+}
+
+/* =========================================================
+   メニュー：ミモザ版と同じ「丸い写真＋点線の料金表」タイプ
+   ========================================================= */
+.menu { background: var(--yellow-soft); }
+.menu-board { display: grid; gap: 32px; margin-bottom: 56px; }
+.menu-item {
+  display: grid; grid-template-columns: 300px 1fr; gap: 36px; align-items: center;
+  background: var(--white); border-radius: 24px; padding: 28px; box-shadow: 0 10px 30px rgba(180, 140, 20, .14);
+}
+.menu-item:nth-child(even) { grid-template-columns: 1fr 300px; }
+.menu-item:nth-child(even) .menu-img { order: 2; }
+.menu-img { width: 300px; height: 300px; object-fit: cover; border-radius: 50%; border: 8px solid var(--yellow); }
+.menu-badge { display: inline-block; background: var(--cta); color: var(--white); font-size: .8rem; font-weight: 700; padding: .2em 1em; border-radius: 999px; margin-bottom: 8px; }
+.menu-content h3 { font-size: 1.5rem; color: var(--brown); margin-bottom: 8px; }
+.menu-for { font-size: .85rem; color: var(--cta); background: var(--beige); display: inline-block; padding: .1em 1em; border-radius: 999px; }
+.prices { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px 32px; margin: 8px 0 0; }
+.prices div { display: flex; align-items: baseline; gap: 8px; padding: 6px 0; }
+.prices dt { order: 1; white-space: nowrap; }
+.prices div::before { content: ""; flex: 1; order: 2; min-width: 16px; border-bottom: 2px dotted #f2b705; transform: translateY(-4px); }
+.prices dd { order: 3; margin: 0 0 0 auto; font-size: 1.1rem; color: var(--brown); white-space: nowrap; }
+
+/* ご予約・お問い合わせ：元の茶色系（ボタンも元のオレンジ） */
+.cta-band .btn-primary { background: #e8794a; box-shadow: 0 4px 14px rgba(232, 121, 74, .35); }
+.cta-band .btn-primary:hover { background: #cf6234; }
+
+@media (max-width: 960px) {
+  .menu-item, .menu-item:nth-child(even) { grid-template-columns: 1fr; text-align: center; }
+  .menu-item:nth-child(even) .menu-img { order: 0; }
+  .menu-img { width: 220px; height: 220px; margin: 0 auto; }
+  .prices { text-align: left; max-width: 480px; margin-inline: auto; }
+}
+@media (max-width: 600px) {
+  .menu-item { padding: 24px 18px; gap: 20px; }
+  .prices { grid-template-columns: 1fr; }
 }

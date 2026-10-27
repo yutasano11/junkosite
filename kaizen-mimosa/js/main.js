@@ -22,7 +22,7 @@
   });
 
   // スクロールでふわっと表示
-  var targets = document.querySelectorAll('.section-title, .worry-list li, .reason, .menu-card, .flow-list li, .voice-card, .first-photo');
+  var targets = document.querySelectorAll('.section-title, .worry-list li, .reason, .menu-item, .flow-list li, .voice-card, .first-photo');
   if (!('IntersectionObserver' in window)) return;
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
