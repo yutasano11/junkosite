@@ -365,3 +365,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .menu-item { padding: 24px 18px; gap: 20px; }
   .prices { grid-template-columns: 1fr; }
 }
+
+/* フッター：ミモザ版と同じ葉のグリーン */
+.site-footer { background: var(--cta); color: var(--white); }
+.site-footer a { color: var(--white); }
+.footer-inner small { opacity: .85; }
