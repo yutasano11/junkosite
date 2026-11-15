@@ -329,3 +329,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .sticky-cta-reserve { background: var(--cta); color: var(--white); }
   .sticky-cta-menu { background: var(--white); color: var(--brown); }
 }
+
+/* 駐車スペースの写真 */
+.parking-photo { margin: 24px 0 0; }
+.parking-photo img { display: block; width: 100%; max-width: 360px; height: auto; border-radius: var(--radius); box-shadow: var(--shadow); }
+.parking-photo figcaption { margin-top: 8px; font-size: .9rem; color: var(--brown-light); }
